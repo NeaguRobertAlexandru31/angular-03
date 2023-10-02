@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
       this.infoLavori = true;
     }
   }
+
 }
 
 /*
