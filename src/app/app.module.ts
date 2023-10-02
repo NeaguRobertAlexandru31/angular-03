@@ -4,19 +4,16 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AccordionComponent } from './accordion/accordion.component';
-
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      //{ path: '', component: SezioneAnagraficaComponent },
-    ])
+/*     { path: '', component: AppComponent },
+ */    ])
   ],
   declarations: [
     AppComponent,
-    AccordionComponent,
   ],
   bootstrap: [
     AppComponent

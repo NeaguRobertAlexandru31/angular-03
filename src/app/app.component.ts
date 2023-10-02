@@ -1,28 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
+  datiAnagrafici = true;
+  infoStudi = false;
+  infoLavori = false;
 
-  datiAnagrafici=false;
-  infoStudi=false;
-  infoLavori=false;
+  constructor() {}
 
-  constructor(){
+  ngOnInit(): void {}
 
+  toggleSezione(nomeSezione: string) {
+    if (nomeSezione === "datiAnagrafici") {
+      this.datiAnagrafici = true;
+      this.infoStudi = false;
+      this.infoLavori = false;
+    } else if (nomeSezione === "infoStudi") {
+      this.datiAnagrafici = false;
+      this.infoStudi = true;
+      this.infoLavori = false;
+    } else if (nomeSezione === "infoLavori") {
+      this.datiAnagrafici = false;
+      this.infoStudi = false;
+      this.infoLavori = true;
+    }
   }
-
-  ngOnInit(){
-
-  }
-
-  
-
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

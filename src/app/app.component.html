@@ -3,7 +3,9 @@
 
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" (click)="datiAnagrafici=!datiAnagrafici" [class.collapsed]="datiAnagrafici">
+        <button class="accordion-button" type="button" 
+                (click)="toggleSezione('datiAnagrafici')" 
+                [class.collapsed]="datiAnagrafici">
           Dati anagrafici
         </button>
       </h2>
