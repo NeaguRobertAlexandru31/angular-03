@@ -15,17 +15,15 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {}
 
   toggleSezione(nomeSezione: string) {
+    this.datiAnagrafici = false;
+    this.infoStudi = false;
+    this.infoLavori = false;
+
     if (nomeSezione === "datiAnagrafici") {
       this.datiAnagrafici = true;
-      this.infoStudi = false;
-      this.infoLavori = false;
     } else if (nomeSezione === "infoStudi") {
-      this.datiAnagrafici = false;
       this.infoStudi = true;
-      this.infoLavori = false;
     } else if (nomeSezione === "infoLavori") {
-      this.datiAnagrafici = false;
-      this.infoStudi = false;
       this.infoLavori = true;
     }
   }
