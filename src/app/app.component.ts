@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
 
+  datiAnagrafici=false;
+  infoStudi=false;
+  infoLavori=false;
+
 }
 
 

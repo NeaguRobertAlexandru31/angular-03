@@ -4,9 +4,6 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SezioneAnagraficaComponent } from './sezione-anagrafica/sezione-anagrafica.component';
-import { SezioneStudiComponent } from './sezione-studi/sezione-studi.component';
-import { SezioneLavoriComponent } from './sezione-lavori/sezione-lavori.component';
 import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
@@ -15,15 +12,10 @@ import { AccordionComponent } from './accordion/accordion.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       //{ path: '', component: SezioneAnagraficaComponent },
-      { path: 'sezione/studi', component: SezioneStudiComponent },
-      { path: 'sezione/lavori', component: SezioneLavoriComponent }
     ])
   ],
   declarations: [
     AppComponent,
-    SezioneAnagraficaComponent,
-    SezioneStudiComponent,
-    SezioneLavoriComponent,
     AccordionComponent,
   ],
   bootstrap: [

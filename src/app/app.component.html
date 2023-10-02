@@ -1,8 +1,46 @@
-<app-sezione-anagrafica></app-sezione-anagrafica>
-<app-sezione-studi></app-sezione-studi>
-<app-sezione-lavori></app-sezione-lavori>
+<h1>Neagu Robert Alexandru</h1>
+<div class="accordion" id="accordionExample">
 
-<app-accordion></app-accordion>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" (click)="datiAnagrafici=!datiAnagrafici" [class.collapsed]="datiAnagrafici">
+          Dati anagrafici
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" [class.show]="datiAnagrafici">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" (click)="infoStudi=!infoStudi" [class.collapsed]="infoStudi">
+          Info studi
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" [class.show]="infoStudi">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" (click)="infoLavori=!infoLavori" [class.collapsed]="infoLavori">
+          Info lavori
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" [class.show]="infoLavori">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 <router-outlet></router-outlet>
 
