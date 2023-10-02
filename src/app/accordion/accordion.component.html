@@ -1,0 +1,21 @@
+<div class="accordion" id="myAccordion">
+    <div class="accordion-item" *ngFor="let component of components; let i = index">
+      <h2 class="accordion-header" id="heading{{i}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+          {{ component.title }}
+        </button>
+      </h2>
+      <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i">
+        <div class="accordion-body">
+          {{ component.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

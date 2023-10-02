@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SezioneAnagraficaComponent } from './sezione-anagrafica/sezione-anagrafica.component';
 import { SezioneStudiComponent } from './sezione-studi/sezione-studi.component';
 import { SezioneLavoriComponent } from './sezione-lavori/sezione-lavori.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { SezioneLavoriComponent } from './sezione-lavori/sezione-lavori.componen
     AppComponent,
     SezioneAnagraficaComponent,
     SezioneStudiComponent,
-    SezioneLavoriComponent
+    SezioneLavoriComponent,
+    AccordionComponent,
   ],
   bootstrap: [
     AppComponent
