@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /* Alternate pen/close sections on click */
   toggleSezione(nomeSezione: string) {
     this.datiAnagrafici = false;
     this.infoStudi = false;
