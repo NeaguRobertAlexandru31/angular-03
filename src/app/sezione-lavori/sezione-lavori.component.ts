@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-sezione-studi',
+  selector: 'app-sezione-lavori',
   templateUrl: './sezione-lavori.component.html',
   styleUrls: ['./sezione-lavori.component.css']
 })

@@ -13,7 +13,7 @@ import { SezioneLavoriComponent } from './sezione-lavori/sezione-lavori.componen
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: SezioneAnagraficaComponent },
+      //{ path: '', component: SezioneAnagraficaComponent },
       { path: 'sezione/studi', component: SezioneStudiComponent },
       { path: 'sezione/lavori', component: SezioneLavoriComponent }
     ])
