@@ -15,7 +15,7 @@
             <div class="col">
               <div class="mb-3">
                 <label for="exampleInputName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleInputName">
+                <input type="text" class="form-control" id="exampleInputName" name="name" [(ngModel)]="name">
               </div>
             </div>
             <div class="col">
@@ -34,7 +34,7 @@
             <label for="exampleInputAdress" class="form-label">Adress</label>
             <input type="text" class="form-control" id="exampleInputAdress">
           </div>
-          
+
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
