@@ -1,6 +1,6 @@
 /* Global Styles */
 input.ng-invalid{
-  background-color: red;
+  border-color: red;
 }
 
 input.valid{

@@ -9,12 +9,13 @@ export class AppComponent implements OnInit {
   datiAnagrafici = true;
   infoStudi = false;
   infoLavori = false;
-  name = "";
-  surname ="";
 
-  constructor() {
-  
-  }
+  jsonIn = {
+    nome: "",
+    surname: "",
+  };
+
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -32,7 +33,6 @@ export class AppComponent implements OnInit {
       this.infoLavori = true;
     }
   }
-
 }
 
 /*

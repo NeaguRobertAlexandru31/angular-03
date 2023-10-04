@@ -1,4 +1,4 @@
-<h1>{{ name }}</h1>
+<h1>{{ jsonIn.nome }}</h1>
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
@@ -26,12 +26,17 @@
                   type="text"
                   class="form-control"
                   id="exampleInputName"
-                  name="name"
-                  [(ngModel)]="name"
+                  name="nome"
+                  [(ngModel)]="jsonIn.nome"
+                  #pippo="ngModel"
+
                   minlength="4"
                   maxlength="20"
                   required
+
                 />
+                <div *ngIf="!pippo.invalid">GRANDE, HAI IL CAZZO ENORME!</div>
+                <div *ngIf="pippo.invalid">ERROR 507 cazzo troppo piccolo</div>
               </div>
             </div>
             <div class="col">
@@ -43,7 +48,7 @@
                   type="text"
                   class="form-control"
                   id="exampleInputSurname"
-                  *ngIf="name.length>5"
+                  *ngIf="jsonIn.nome.length>5"
                 />
               </div>
             </div>
