@@ -1,38 +1,70 @@
-<h1>Neagu Robert Alexandru</h1>
+<h1>{{ name }}</h1>
 <div class="accordion" id="accordionExample">
-
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button" type="button" (click)="toggleSezione('datiAnagrafici')"
-        [class.collapsed]="datiAnagrafici">
+      <button
+        class="accordion-button"
+        type="button"
+        (click)="toggleSezione('datiAnagrafici')"
+        [class.collapsed]="datiAnagrafici"
+      >
         Dati anagrafici
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" [class.show]="datiAnagrafici">
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse"
+      [class.show]="datiAnagrafici"
+    >
       <div class="accordion-body">
         <form>
           <div class="row">
             <div class="col">
               <div class="mb-3">
                 <label for="exampleInputName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleInputName" name="name" [(ngModel)]="name">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputName"
+                  name="name"
+                  [(ngModel)]="name"
+                  minlength="4"
+                  maxlength="20"
+                  required
+                />
               </div>
             </div>
             <div class="col">
               <div class="mb-3">
-                <label for="exampleInputSurname" class="form-label">Surname</label>
-                <input type="text" class="form-control" id="exampleInputSurname">
+                <label for="exampleInputSurname" class="form-label"
+                  >Surname</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputSurname"
+                  *ngIf="name.length>5"
+                />
               </div>
             </div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
           <div class="mb-3">
             <label for="exampleInputAdress" class="form-label">Adress</label>
-            <input type="text" class="form-control" id="exampleInputAdress">
+            <input type="text" class="form-control" id="exampleInputAdress" />
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -43,12 +75,20 @@
 
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" (click)="toggleSezione('infoStudi')"
-        [class.collapsed]="infoStudi">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        (click)="toggleSezione('infoStudi')"
+        [class.collapsed]="infoStudi"
+      >
         Info studi
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" [class.show]="infoStudi">
+    <div
+      id="collapseTwo"
+      class="accordion-collapse collapse"
+      [class.show]="infoStudi"
+    >
       <div class="accordion-body">
         <p>Tabella con info studi</p>
       </div>
@@ -57,22 +97,28 @@
 
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" (click)="toggleSezione('infoLavori')"
-        [class.collapsed]="infoLavori">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        (click)="toggleSezione('infoLavori')"
+        [class.collapsed]="infoLavori"
+      >
         Info lavori
       </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" [class.show]="infoLavori">
+    <div
+      id="collapseThree"
+      class="accordion-collapse collapse"
+      [class.show]="infoLavori"
+    >
       <div class="accordion-body">
         <p>Tabella con info lavori</p>
       </div>
     </div>
   </div>
-
 </div>
 
 <router-outlet></router-outlet>
-
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

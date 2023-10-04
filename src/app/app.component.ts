@@ -9,15 +9,11 @@ export class AppComponent implements OnInit {
   datiAnagrafici = true;
   infoStudi = false;
   infoLavori = false;
-
-  name:string;
+  name = "";
+  surname ="";
 
   constructor() {
-    this.name='';
-  }
-
-  submitForm(){
-    console.log(this.name);
+  
   }
 
   ngOnInit(): void {}

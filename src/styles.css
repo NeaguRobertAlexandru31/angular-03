@@ -1,4 +1,12 @@
 /* Global Styles */
+input.ng-invalid{
+  background-color: red;
+}
+
+input.valid{
+  background-color: aquamarine;
+}
+
 .verde{
   color: lime;
 }
