@@ -7,6 +7,7 @@ interface Cliente{
   altezza?: number,
   email: string,
   sesso: "M" | "F" | "-1",
+  dataNascita: any,
 }
 
 @Component({
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
     surname: "",
     email: "",
     sesso: "-1",
+    dataNascita: "",
   };
 
   constructor() {}

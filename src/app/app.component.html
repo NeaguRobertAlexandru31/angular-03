@@ -69,6 +69,20 @@
     Please select a valid state.
   </div>
 </div>
+<div class="col-md-4">
+  <label for="email" class="form-label">Data Nascita</label>
+  <input
+    type="date"
+    class="form-control"
+    id="email"
+    name="email"
+    [(ngModel)]="jsonIn.dataNascita"
+    required
+  />
+  <!-- <div class="valid-feedback">
+      Looks good!
+  </div> -->
+</div>
 <div class="col-12">
   <button class="btn btn-primary" type="submit">Submit form</button>
 </div>
