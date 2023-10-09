@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
     dataNascita: "",
   };
 
-  onDataNascitaChange(){
-    
+  onDataNascitaChange($event: any){
+
   }
 
   constructor() {}
