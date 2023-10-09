@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 
 interface Cliente{
+  id?: number,
   nome: string,
   surname: string,
   altezza?: number,
+  email: string,
 }
 
 @Component({
@@ -19,6 +21,7 @@ export class AppComponent implements OnInit {
   jsonIn: Cliente = {
     nome: "",
     surname: "",
+    email: "",
   };
 
   constructor() {}
