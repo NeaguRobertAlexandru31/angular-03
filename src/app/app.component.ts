@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   };
 
   onDataNascitaChange($event: any){
-
+    console.log($event);
   }
 
   constructor() {}
