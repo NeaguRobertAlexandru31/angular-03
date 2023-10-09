@@ -28,6 +28,10 @@ export class AppComponent implements OnInit {
     dataNascita: "",
   };
 
+  onDataNascitaChange(){
+    
+  }
+
   constructor() {}
 
   ngOnInit(): void {
