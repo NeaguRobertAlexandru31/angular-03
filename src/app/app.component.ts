@@ -13,11 +13,18 @@ export class AppComponent implements OnInit {
   jsonIn = {
     nome: "",
     surname: "",
+    altezza: null,
   };
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+
+  save(){
+    
+  }
 
   /* Alternate pen/close sections on click */
   toggleSezione(nomeSezione: string) {

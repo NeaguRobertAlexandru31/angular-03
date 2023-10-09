@@ -1,132 +1,51 @@
-<h1>{{ jsonIn.nome }}</h1>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button"
-        type="button"
-        (click)="toggleSezione('datiAnagrafici')"
-        [class.collapsed]="datiAnagrafici"
-      >
-        Dati anagrafici
-      </button>
-    </h2>
-    <div
-      id="collapseOne"
-      class="accordion-collapse collapse"
-      [class.show]="datiAnagrafici"
-    >
-      <div class="accordion-body">
-        <form>
-          <div class="row">
-            <div class="col">
-              <div class="mb-3">
-                <label for="exampleInputName" class="form-label">Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputName"
-                  name="nome"
-                  [(ngModel)]="jsonIn.nome"
-                  #pippo="ngModel"
-
-                  minlength="4"
-                  maxlength="20"
-                  required
-
-                />
-                <div *ngIf="!pippo.invalid">GRANDE, HAI IL CAZZO ENORME!</div>
-                <div *ngIf="pippo.invalid">ERROR 507 cazzo troppo piccolo</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="mb-3">
-                <label for="exampleInputSurname" class="form-label"
-                  >Surname</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputSurname"
-                  *ngIf="jsonIn.nome.length>5"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputAdress" class="form-label">Adress</label>
-            <input type="text" class="form-control" id="exampleInputAdress" />
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        (click)="toggleSezione('infoStudi')"
-        [class.collapsed]="infoStudi"
-      >
-        Info studi
-      </button>
-    </h2>
-    <div
-      id="collapseTwo"
-      class="accordion-collapse collapse"
-      [class.show]="infoStudi"
-    >
-      <div class="accordion-body">
-        <p>Tabella con info studi</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        (click)="toggleSezione('infoLavori')"
-        [class.collapsed]="infoLavori"
-      >
-        Info lavori
-      </button>
-    </h2>
-    <div
-      id="collapseThree"
-      class="accordion-collapse collapse"
-      [class.show]="infoLavori"
-    >
-      <div class="accordion-body">
-        <p>Tabella con info lavori</p>
-      </div>
-    </div>
-  </div>
+<div class="col-md-4">
+  <label for="nome" class="form-label">Nome</label>
+  <input
+    type="text"
+    class="form-control"
+    id="nome"
+    name="nome"
+    maxlength="256"
+    [(ngModel)]="jsonIn.nome"
+    required
+  />
+  <!-- <div class="valid-feedback">
+      Looks good!
+  </div> -->
 </div>
-
-<router-outlet></router-outlet>
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
+<div class="col-md-4">
+  <label for="cognome" class="form-label">Cognome</label>
+  <input
+    type="text"
+    class="form-control"
+    id="cognome"
+    name="cognome"
+    maxlength="256"
+    [(ngModel)]="jsonIn.surname"
+    required
+  />
+  <!-- <div class="valid-feedback">
+      Looks good!
+  </div> -->
+</div>
+<div class="col-md-4">
+  <label for="altezza" class="form-label">Altezza in cm</label>
+  <input
+    type="number"
+    class="form-control"
+    id="altezza"
+    name="altezza"
+    min="1"
+    max="250"
+    step="1"
+  />
+  <!-- <div class="valid-feedback">
+      Looks good!
+  </div> -->
+</div>
+<div class="col-12">
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</div>
+<pre
+  >{{ jsonIn | json }}
+</pre>
