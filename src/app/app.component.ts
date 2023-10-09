@@ -1,5 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 
+interface Cliente{
+  nome: string,
+  surname: string,
+  altezza: number,
+}
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
