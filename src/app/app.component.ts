@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 interface Cliente{
   nome: string,
   surname: string,
-  altezza: number,
+  altezza?: number,
 }
 
 @Component({
@@ -16,10 +16,9 @@ export class AppComponent implements OnInit {
   infoStudi = false;
   infoLavori = false;
 
-  jsonIn = {
+  jsonIn: Cliente = {
     nome: "",
     surname: "",
-    altezza: null,
   };
 
   constructor() {}
