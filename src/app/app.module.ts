@@ -4,18 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { HomeComponent} from './home/home.component'
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    /* RouterModule.forRoot([
-    //{ path: '', component:  },    
-    ]), */
     FormsModule,
   ],
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   bootstrap: [
     AppComponent
