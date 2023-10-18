@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-interface Cliente{
-  id?: number,
-  nome: string,
-  surname: string,
-  altezza?: number,
-  email: string,
-  sesso: "M" | "F" | "-1",
-  dataNascita: any,
+interface Cliente {
+  id?: number;
+  nome: string;
+  surname: string;
+  altezza?: number;
+  email: string;
+  sesso: "M" | "F" | "-1";
+  dataNascita: any;
 }
 
 @Component({
@@ -16,46 +17,19 @@ interface Cliente{
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-  datiAnagrafici = true;
-  infoStudi = false;
-  infoLavori = false;
+  
+  drinks: any = []
 
-  jsonIn: Cliente = {
-    nome: "",
-    surname: "",
-    email: "",
-    sesso: "-1",
-    dataNascita: "",
-  };
-
-  onDataNascitaChange($event: any){
-    console.log($event);
-  }
-
-  constructor() {}
-
-  ngOnInit(): void {
-
-  }
-
-  save(){
+  constructor(private http: HttpClient) {
     
   }
 
-  /* Alternate pen/close sections on click */
-  toggleSezione(nomeSezione: string) {
-    this.datiAnagrafici = false;
-    this.infoStudi = false;
-    this.infoLavori = false;
-
-    if (nomeSezione === "datiAnagrafici") {
-      this.datiAnagrafici = true;
-    } else if (nomeSezione === "infoStudi") {
-      this.infoStudi = true;
-    } else if (nomeSezione === "infoLavori") {
-      this.infoLavori = true;
-    }
-  }
+  ngOnInit(): void {
+    this.http.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a').subscribe((response:any) => {
+      console.log(response.drinks);
+      this.drinks = response.drinks
+    })
+  }
 }
 
 /*

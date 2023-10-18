@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +13,7 @@ import { ProfiloComponent} from './profilo/profilo.component'
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
